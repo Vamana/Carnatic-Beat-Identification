@@ -2,7 +2,7 @@
  This project develops an ML/AI classifier that identifies the Carnatic beat (taalam) of a mridangam solo
  
 ## Background:
-In the South Indian classical music genre (also called Carnatic music), the concept of rhythm is very well developed and sophisticated. All songs follow a certain beat cycle called taalam. During a concert the percussionist, who typically plays a hand drum called mridangam, is given an opportunity to perform a drum solo, where he/she brings out the intricacies of the taalam of the preceding song. The solo can last from 5 to 10 minutes to as much as 30 to 40 minutes.
+In the South Indian classical music genre (also called **Carnatic** music), the concept of rhythm is very well developed and sophisticated. All songs follow a certain beat cycle called taalam. During a concert the percussionist, who typically plays a hand drum called mridangam, is given an opportunity to perform a drum solo, where he/she brings out the intricacies of the taalam of the preceding song. The solo can last from 5 to 10 minutes to as much as 30 to 40 minutes.
 
 ## The Project Goal:
 Given a clip of the drum solo, identify the taalam (beat cycle) in which it is performed. <br/>
