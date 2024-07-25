@@ -7,7 +7,7 @@ In the South Indian classical music genre (also called **Carnatic** music), the 
 ## The Project Goal:
 Given a clip of a drum solo, identify the taalam (beat cycle) in which it is performed. <br/>
 
-While there are 5 main taalam types that are commonly performed (and in principle thousands of possible taalams), I have restricted the scope of this project to **3 well-known** and often-used taalams: _aadi talam_ (8-beat cycle), _mishra-chapu talam_ (7 beat cycle) and _rupaka talam_ (3-beat cycle).
+While there are 5 main taalam types that are commonly performed (and in principle thousands of possible taalams), I have restricted the scope of this project to **3 well-known** and often-used taalams: _aadi talam_ (8-beat cycle), _mishra-chapu talam_ (7 beat cycle) and _khanda-chapu talam_ (5-beat cycle).
 
 ## Data Sources:
 Fortunately, numerous video and audio recordings of Carnatic music concerts, including the drum solo portion, are available on the internet. In particular YouTube (video) and SangeethaPriya.org (audio) host thousands of high-quality recordings. So the _raw_ data (audio clips) is available.
