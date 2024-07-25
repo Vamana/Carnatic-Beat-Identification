@@ -5,7 +5,7 @@
 In the South Indian classical music genre (also called **Carnatic** music), the concept of rhythm is very well developed and sophisticated. All songs follow a certain beat cycle called taalam. During a concert the percussionist, who typically plays a hand drum called mridangam, is given an opportunity to perform a drum solo, where he/she brings out the intricacies of the taalam of the preceding song. The solo can last from 5 to 10 minutes to as much as 30 to 40 minutes.
 
 ## The Project Goal:
-Given a clip of the drum solo, identify the taalam (beat cycle) in which it is performed. <br/>
+Given a clip of a drum solo, identify the taalam (beat cycle) in which it is performed. <br/>
 
 While there are 5 main taalam types that are commonly performed (and in principle thousands of possible taalams), I have restricted the scope of this project to **3 well-known** and often-used taalams: _aadi talam_ (8-beat cycle), _mishra-chapu talam_ (7 beat cycle) and _rupaka talam_ (3-beat cycle).
 
