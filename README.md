@@ -20,13 +20,15 @@ One could ideally analyze the mp3 file directly and detect the timestamp of inte
 We will first create an **_image of the sound intensity_** by reading the mp3 file into **Audacity**, a popular open-source app for audio editing and recording, and taking a **screenshot** of the intensity waveform. We then use a custom image-analysis software (developed by me) to identify the intensity spikes corresponding to each drum beat. <br/>
 
 #### Custom Image Analysis software
-The idea is further explained in the image below. At the end of the day, a vector of of time stamps is generated for each clip.
+The idea is further explained in the image below, which is a screenshot of an audio clip viewed in Audacity.
 
 ![Explainer](https://github.com/user-attachments/assets/c6597ff4-4fe2-4629-916a-9637869c68ea)
 
 Here's a screen shot of the custom software at work (runs on Windows only). I call it **Spike**, because it detects spikes in the sound intensity.
 
 ![SignalDetectionApp](https://github.com/user-attachments/assets/c04272ee-47e9-4e4b-9aaf-54a245c0f365)
+
+At the end of the day, a vector of of time stamps is generated for each audio clip.
 
 #### Data generation is underrated!
 We remark here that there is some art behind the data generation. For example, what is the definition of a "spike" in sound intensity, and how does one separate it from background? How dependent is the vectorization on choice of base scan position? There was some trial and error and experimentation in developing the image analysis software. At a meta level, is there a better approach to vectorizing a sound clip to select out drum beats, other than intensity analysis? <br/>
