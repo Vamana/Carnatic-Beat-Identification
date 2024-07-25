@@ -15,20 +15,20 @@ Fortunately, numerous video and audio recordings of Carnatic music concerts, inc
 ## Data Vectorization:
 While the raw data is available, it has to be transformed into a form suitable for analysis. We do this by **_vectorizing_** the sound clip. <br/>
 
-One could analyze the mp3 file directly and detect the timestamp of intensities. This would require a reasonably deep understanding of the mp3 format and some familiarity with some open-source (or free) software package that can be used to generate the required data. In the interest of time, here we will generate the vectorization through an indirect path, as follows: <br/>
-We will first create an image of the sound intensity by reading the mp3 file into **Audacity**, an open-source app for audio editing and recording. We then use a custom-written image-analysis software to identify the intensity spikes corresponding to each drum beat. <br/>
+One could analyze the mp3 file directly and detect the timestamp of intensities. This would require a reasonably deep understanding of the mp3 format and some familiarity with some open-source (or free) software package that can be used to query the mp3 object for required parameters. In the interest of time, here we will generate the vectorization through an indirect path, as follows: <br/>
+We will first create an **_image of the sound intensity_** by reading the mp3 file into **Audacity**, an open-source app for audio editing and recording, and taking a screenshot. We then use a custom-written image-analysis software (developed by me) to identify the intensity spikes corresponding to each drum beat. <br/>
 
 The idea is explained in the image below. At the end of the day, a vector of of time stamps is generated for each clip.
 
 ![Explainer](https://github.com/user-attachments/assets/c6597ff4-4fe2-4629-916a-9637869c68ea)
 
 Here's a screen shot of the custom software at work. I call it **Spike**, because it detects spikes in the sound intensity.
+
 ![SignalDetectionApp](https://github.com/user-attachments/assets/c04272ee-47e9-4e4b-9aaf-54a245c0f365)
 
 
-
 ## ML/AI Analysis Techniques:
-
-The question is one of classification: given an audio clip, classify it as one of the 3 taalams. This will be done by a 2-step process:
+The ML/AI question here is one of **classification**: given an audio clip, classify it as one of the 3 taalams.
+We will try several classification algorithms (LogisticRegression, KNN, DecisionTree, SVM) to see which one gives the best results.
 
 
