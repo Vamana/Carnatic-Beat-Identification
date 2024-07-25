@@ -39,4 +39,45 @@ One develops a genuine respect and admiration for those who collect high-quality
 The ML/AI question here is one of **classification**: given an audio clip, classify it as one of the 3 taalams.
 We will try several classification algorithms (LogisticRegression, KNN, DecisionTree, SVM) to see which one gives the best results.
 
+## Data:
+Each data row corresponding to one audio clip consists of 250 time stamps (250 features), normalized to 1 (ie. if an intensity spike starts at the start of the clip, timestamp = 0; if a spike occurs at the end of the clip, timestamp = 1. The column "Beat" specifies the beat cycle of the audio clip (A or M or K). Here's a data sample of 5 rows:
+![DataSample](https://github.com/user-attachments/assets/49f9169b-e18a-4b10-8a58-67d3f028f28e)
 
+**Note:** <br/>
+At the time of writing, we have only one data row of a Khanda Chapu (K) beat (others are being generated). The analysis below has been conducted with two classes of beats (A and M).
+
+## Data Models
+We built 5 models to classify the data (target = 'Beats'): LogisticRegression, DecisionTreeClassifier, KNeighborsClassifier, Support Vector Classifier (SVC) and LogisticRegressionCV.
+Each model was trained on a training dataset and evaluated on a test dataset.
+
+## Results
+### Model Accuracy
+Below are the accuracy results for each model:
+![ModelAccuracy](https://github.com/user-attachments/assets/94ac6483-d97e-4231-813e-cac63bcbd5d7)
+
+### Computation time
+Here are the computation times (relative values are meaningful; absolute values will change as the dataset size increases):
+![ComputeTime](https://github.com/user-attachments/assets/b3955fc7-88e6-44ea-bd1f-a748a93dd235)
+
+## Evaluation
+#### Model Accuracy
+All models did fare better than random chance but most were not very impressive, scoring in the 60% to 70% range. The exception was <b>Support Vector Classifier (SVC)</b> which had a score of 87%. 
+
+#### Computational performance
+LogisticRegressionCV took the longest time by far. Our best accuracy performer, svc, was also the speediest.
+
+#### Caveat
+The above analysis was done with a _very small_ dataset! The results might change as more data is generated and brought into the analysis.
+
+### Recommendations and Remarks
+Based on the results of our Machine Learning models, considering both Model Accuracy and Computational Performance, we can recommend that <b>SVC</b> is a promising model to use to identify the beat cycle of a Carnatic drum solo. It is encouraging to see that the vectorization approach used here seems to be reasonable enough to pursue further. The results seem to validate the hope that ML/AI techniques can be successfully brought to bear on an esoteric topic like Carnatic beat identification.
+
+### Next Steps
+#### Data, data, data
+There is an old adage that the 3 most important aspects in real estate are location, location, location. One could say that in an AI/ML project, the 3 most important aspects are data, data, data! Without a lot of high-quality data, the results of any analysis has to be taken with a grain of salt. We need **a lot** more data to analyze before we can confidently assert that we have built a reliable AI model to identify a Carnatic beat cycle.
+
+#### Sound Clip Vectorization
+At a meta level, is there a better approach to vectorizing a sound clip to select out drum beats, other than intensity analysis? Experts in the domain (music) might have some suggestions about how they discern different beat cycles, which might be translatable into a vectorization technique. 
+ 
+#### Neural Nets
+Since we have pretty high-dimensional data to begin with, a Neural Net approach might give much better results than the classic ML/AI regression techniques that we have applied here. This path is definitely worth exploring further.
