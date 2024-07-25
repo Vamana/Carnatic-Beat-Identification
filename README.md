@@ -16,8 +16,8 @@ Fortunately, numerous video and audio recordings of Carnatic music concerts, inc
 While the raw data is available, it has to be transformed into a form suitable for analysis. We do this by **_vectorizing_** the sound clip. <br/>
 The vectorization idea pursued here is to generate a series of time stamps corresponding to each drum beat (strike). A drum beat's signature is a sudden rise in sound intensity (a spike) with respect to the background intensity.
 
-One could ideally analyze the mp3 file directly and detect the timestamp of intensities. This would require a reasonably deep understanding of the mp3 format and some familiarity with some open-source (or free) software package that can be used to query the mp3 object for required parameters. In the interest of time, here we will generate the vectorization through an indirect path, as follows: <br/>
-We will first create an **_image of the sound intensity_** by reading the mp3 file into **Audacity**, a popular open-source app for audio editing and recording, and taking a **screenshot** of the intensity waveform. We then use a custom image-analysis software (developed by me) to identify the intensity spikes corresponding to each drum beat. <br/>
+One could ideally analyze the mp3 file directly and detect the timestamp of intensities. This would require a reasonably deep understanding of the mp3 format and some familiarity with some open-source (or free) software package that can be used to query the mp3 object for required parameters. In the interest of time, here we generate the vectorization through an indirect path, as follows: <br/>
+We first create an **_image of the sound intensity_** by reading the mp3 file into **Audacity**, a popular open-source app for audio editing and recording, and taking a **screenshot** of the intensity waveform. We then use a custom image-analysis software (developed by me for this purpose) to identify the intensity spikes corresponding to each drum beat. <br/>
 
 #### Custom Image Analysis software
 The idea is further explained in the image below, which is a screenshot of an audio clip viewed in Audacity.
