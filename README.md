@@ -110,6 +110,7 @@ Preliminary analysis using <b>2 classes</b> only to check the feasibility of usi
 ## Discussion of Results
 - Classic ML/AI classification tools have an accuracy of about 60% (random guess = 33%)
 - Neural networks have an accuracy of 50 to 66%.
+- About twice as accurate as random guess.
 - <b>Results are preliminary</b> due to the small dataset size and will most likely change as more data is generated.
 
 #### Comparison with Human Performance
