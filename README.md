@@ -2,7 +2,7 @@
 ### What _is_ that beat cycle?
  
 ## Introduction and Background
-This project develops an ML/AI classifier that identifies the Carnatic beat (taalam) of a mridangam solo. <br/>
+This project develops an ML/AI classifier that identifies the <b>Carnatic beat (taalam)</b> of a mridangam solo. <br/>
  - In the South Indian classical music genre (also called Carnatic music), the concept of rhythm is very well developed and sophisticated.
  - Every song/composition follows a certain beat cycle called taalam.
  - During a concert, the percussionist, who typically plays a hand drum called <b>mridangam</b>, performs a drum solo where he/she <b>improvises</b> on the taalam of the preceding song.
