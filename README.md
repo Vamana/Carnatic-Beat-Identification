@@ -102,14 +102,14 @@ Preliminary analysis using <b>2 classes</b> only to check the feasibility of usi
 - Epochs kept fixed at 100 from earlier analysis of accuracy vs epochs.
 - Accuracy on the test (validation) data are below.
 
-![model_valid_accuracy_line_NN_3](https://github.com/user-attachments/assets/7d5348f7-3b1f-4b77-a9d7-f625a7d17095)
+![model_valid_accuracy_line_NN_3](https://github.com/user-attachments/assets/26feb6da-d3a5-48d9-afcc-5131bf8934dc)
 
 - Best-performing models have: 4 to 8 hidden layers, 30 - 60 nodes
-- Best performers are ⪆ 50% accurate.
+- Best performers are <b>50 to 66%</b> accurate (about twice the accuracy of random guess)
 
 ## Discussion of Results
 - Classic ML/AI classification tools have an accuracy of about 60% (random guess = 33%)
-- Neural networks have an accuracy ⪆ 50%.
+- Neural networks have an accuracy of 50 to 66%.
 - <b>Results are preliminary</b> due to the small dataset size and will most likely change as more data is generated.
 
 #### Comparison with Human Performance
